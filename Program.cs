@@ -39,8 +39,13 @@ class Program
 
 
         //FileStream Test
-        FileStreamTest test1=new FileStreamTest();
-        test1.FileStreamTestMethod();
+        // FileStreamTest test1=new FileStreamTest();
+        // test1.FileStreamTestMethod();
+
+
+        //delegate test
+        DelegateTest test1=new DelegateTest();
+        test1.DelegateTestMethod();
         
     }
     // static void Main(string[] args)
