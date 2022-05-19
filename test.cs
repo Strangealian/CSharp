@@ -337,7 +337,7 @@ namespace TestConsoleApplication
 
     }
 
-
+    //索引器测试程序
     public class DataSamples
     {
         private class Page
@@ -452,6 +452,28 @@ namespace TestConsoleApplication
                     pagesInMemory.Remove(oldest);
             }
             pagesInMemory.Add(p);
+        }
+    }
+
+    //委托测试程序
+    delegate int DelegateMethod(int a,int b);
+    public class DelegateTest
+    {
+        public int Add(int a,int b)
+        {
+            return a+b;
+        }
+        public int Multiply(int a,int b)
+        {
+            return a*b;
+        }
+
+        public void DelegateTestMethod()
+        {
+            DelegateMethod m1=new DelegateMethod(Add);
+            DelegateMethod m2=new DelegateMethod(Multiply);
+            Console.WriteLine(m1(10,20));
+            Console.WriteLine(m2(10,20));
         }
     }
 
